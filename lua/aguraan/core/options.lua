@@ -40,3 +40,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- show hidden characters
+opt.list = true
+opt.listchars = { tab = "» ", trail = "·", extends = ">", precedes = "<" }

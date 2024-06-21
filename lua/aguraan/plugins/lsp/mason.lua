@@ -32,10 +32,10 @@ return {
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
-				"graphql",
+				-- "graphql",
 				"emmet_ls",
-				"prismals",
-				"pyright",
+				-- "prismals",
+				-- "pyright",
 				"gopls",
 			},
 			-- auto-install configured servers (with lspconfig)

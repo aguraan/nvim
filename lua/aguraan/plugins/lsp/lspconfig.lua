@@ -82,6 +82,13 @@ return {
 			on_attach = on_attach,
 		})
 
+		-- configure clangd server with plugin
+		lspconfig["clangd"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+      filetypes = { "c", "cpp", "objc", "objcpp" },
+		})
+
 		-- configure css server
 		lspconfig["cssls"].setup({
 			capabilities = capabilities,

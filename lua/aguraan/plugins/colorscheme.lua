@@ -14,4 +14,22 @@ return {
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
+  -- {
+  --   "neanias/everforest-nvim",
+  --   priority = 1000,
+  --   version = false,
+  --   lazy = false,
+  --   config = function()
+  --     require("everforest").setup({
+  --       style = "hard",
+  --       -- transparent = false,
+  --       -- italic = false,
+  --       -- undercurl = true,
+  --       -- hide_inactive_statusline = true,
+  --       -- dark_sidebar = true,
+  --       -- sidebars = { "qf", "vista_kind", "terminal", "packer" },
+  --     })
+  --     vim.cmd([[colorscheme everforest]])
+  --   end,
+  -- }
 }

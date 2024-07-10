@@ -41,5 +41,11 @@ keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
 -- delete single character without copying into register
-keymap.set("n", "x", '"_x')
+-- keymap.set("n", "x", '"_x')
 keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without yanking" })
+
+-- Gitsigns
+keymap.set("n", "<leader>gs", ":<C-U>Gitsigns<CR>", { desc = "Toggle Gitsigns" })
+keymap.set("n", "<leader>gh", ":<C-U>Gitsigns preview_hunk<CR>", { desc = "Preview Gitsigns hunk" })
+keymap.set("n", "<leader>]h", ":<C-U>Gitsigns next_hunk<CR>", { desc = "Next Gitsigns hunk" })
+keymap.set("n", "<leader>[h", ":<C-U>Gitsigns prev_hunk<CR>", { desc = "Previous Gitsigns hunk" })

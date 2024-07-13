@@ -9,6 +9,9 @@ return {
           floats = "transparent",
         },
         lualine_bold = true,
+        on_colors = function(colors)
+          colors.bg_sidebar = colors.none
+        end,
 			})
 			-- load the colorscheme here
 			vim.cmd([[colorscheme tokyonight]])

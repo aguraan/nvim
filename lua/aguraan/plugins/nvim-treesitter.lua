@@ -16,6 +16,11 @@ return {
 				highlight = {
 					enable = true,
 					-- additional_vim_regex_highlighting = "typescript",
+          disable = function (_, bufnr)
+            local buf_name = vim.api.nvim_buf_get_name(bufnr)
+            local file_size = vim.fn.getfsize(buf_name)
+            return file_size > 256 * 1024
+          end,
 				},
 				-- enable indentation
 				indent = { enable = true },

@@ -44,3 +44,9 @@ opt.swapfile = false
 -- show hidden characters
 opt.list = true
 opt.listchars = { tab = "» ", trail = "·", extends = ">", precedes = "<" }
+
+opt.scrolloff = 8 -- start scrolling when we're 8 lines away from margins
+opt.sidescrolloff = 15 -- start scrolling when we're 15 columns away from margins
+
+-- session options for autosession
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

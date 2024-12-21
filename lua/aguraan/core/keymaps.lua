@@ -9,15 +9,7 @@ local keymap = vim.keymap -- for conciseness
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
--- increment/decrement numbers
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
-
 -- window management
--- keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
--- keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
--- keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
--- keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 keymap.set("n", "<M-,>", "<c-w>5<", { desc = "Decrease split window width" }) -- decrease split window width
 keymap.set("n", "<M-.>", "<c-w>5>", { desc = "Increase split window width" }) -- increase split window width
 keymap.set("n", "<M-t>", "<C-W>+", { desc = "Increase split window height" }) -- increase split window height
@@ -56,3 +48,6 @@ keymap.set("n", "<leader>[h", ":<C-U>Gitsigns prev_hunk<CR>", { desc = "Previous
 
 -- Cloak
 keymap.set("n", "<leader>sl", ":<C-U>CloakPreviewLine<CR>", { desc = "Preview Cloak line" })
+
+-- Terminal
+keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })

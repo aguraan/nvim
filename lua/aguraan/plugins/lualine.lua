@@ -61,8 +61,11 @@ return {
     }
 
     local custom_tokyonight = require("lualine.themes.tokyonight")
-    custom_tokyonight.normal.c.bg = nil
-    custom_tokyonight.inactive.c.bg = nil
+
+    -- enable transparency
+    -- custom_tokyonight.normal.c.bg = nil
+    -- custom_tokyonight.inactive.c.bg = nil
+
     -- configure lualine with modified theme
     lualine.setup({
       options = {

@@ -17,9 +17,9 @@ return {
       inactive_bg = "#2c3043",
     }
 
+    local util = require("lspconfig.util")
     -- get root dir of current project
     local function get_root_dir()
-      local util = require("lspconfig.util")
       local root = util.root_pattern(".git")(vim.fn.expand("%:p:h"))
       if root == nil then
         return [[no project]]
@@ -60,11 +60,14 @@ return {
       },
     }
 
+    local custom_tokyonight = require("lualine.themes.tokyonight")
+    custom_tokyonight.normal.c.bg = nil
+    custom_tokyonight.inactive.c.bg = nil
     -- configure lualine with modified theme
     lualine.setup({
       options = {
         -- theme = my_lualine_theme,
-        theme = "tokyonight",
+        theme = custom_tokyonight,
       },
       sections = {
         lualine_x = {
@@ -79,6 +82,7 @@ return {
           { "filetype" },
         },
       },
+      extensions = {'quickfix', 'fugitive', 'nvim-tree'},
     })
   end,
 }

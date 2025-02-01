@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
+    "pmizio/typescript-tools.nvim",
 	},
 	config = function()
 		-- import lspconfig plugin
@@ -77,7 +78,12 @@ return {
 		})
 
 		-- configure typescript server with plugin
-		lspconfig["ts_ls"].setup({
+		-- lspconfig["ts_ls"].setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- })
+
+		lspconfig["typescript-tools"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

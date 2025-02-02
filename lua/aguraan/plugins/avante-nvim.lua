@@ -8,7 +8,7 @@ return {
 		openai = {
 			model = "gpt-4o-mini",
 		},
-    hints = { enabled = false },
+		hints = { enabled = false },
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
 	build = "make",
@@ -43,6 +43,7 @@ return {
 			"MeanderingProgrammer/render-markdown.nvim",
 			opts = {
 				file_types = { "markdown", "Avante" },
+				latex = { enabled = false },
 			},
 			ft = { "markdown", "Avante" },
 		},

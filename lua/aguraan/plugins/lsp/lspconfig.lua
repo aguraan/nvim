@@ -4,11 +4,11 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-    "pmizio/typescript-tools.nvim",
 	},
 	config = function()
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
+		local typescript_tools = require("typescript-tools")
 
 		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -83,16 +83,24 @@ return {
 		-- 	on_attach = on_attach,
 		-- })
 
-		lspconfig["typescript-tools"].setup({
+		typescript_tools.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			settings = {
+				tsserver_plugins = {
+					-- for TypeScript v4.9+
+					"@styled/typescript-styled-plugin",
+					-- or for older TypeScript versions
+					-- "typescript-styled-plugin",
+				},
+			},
 		})
 
 		-- configure clangd server with plugin
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
-      filetypes = { "c", "cpp", "objc", "objcpp" },
+			filetypes = { "c", "cpp", "objc", "objcpp" },
 		})
 
 		-- configure css server
@@ -124,9 +132,9 @@ return {
 		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
-      cmd = {"gopls"},
-      filetypes = { "go", "gomod", "gowork", "gotmpl" },
-      root_dir = lspconfig.util.root_pattern("go.work"," go.mod", ".git"),
+			cmd = { "gopls" },
+			filetypes = { "go", "gomod", "gowork", "gotmpl" },
+			root_dir = lspconfig.util.root_pattern("go.work", " go.mod", ".git"),
 		})
 
 		-- configure emmet language server

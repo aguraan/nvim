@@ -77,7 +77,7 @@ return {
 			on_attach = on_attach,
 		})
 
-		-- configure typescript server with plugin
+		-- -- configure typescript server with plugin
 		-- lspconfig["ts_ls"].setup({
 		-- 	capabilities = capabilities,
 		-- 	on_attach = on_attach,
@@ -87,6 +87,13 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = {
+				-- array of strings("fix_all"|"add_missing_imports"|"remove_unused"|
+				-- "remove_unused_imports"|"organize_imports") -- or string "all"
+				-- to include all supported code actions
+				-- specify commands exposed as code_actions
+				-- expose_as_code_action = {
+				-- 	"all",
+				-- },
 				tsserver_plugins = {
 					-- for TypeScript v4.9+
 					"@styled/typescript-styled-plugin",

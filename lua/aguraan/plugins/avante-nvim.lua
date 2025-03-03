@@ -6,6 +6,17 @@ return {
 	opts = {
 		provider = "openai",
 		openai = {
+      -- Models Aliases:
+      -- - gpt-4o
+      -- - chatgpt-4o-latest
+      -- - gpt-4o-mini
+      -- - o1
+      -- - o1-mini
+      -- - o3-mini
+      -- - o1-preview
+      -- - gpt-4o-realtime-preview
+      -- - gpt-4o-mini-realtime-preview
+      -- - gpt-4o-audio-preview
 			model = "gpt-4o-mini",
 		},
 		hints = { enabled = false },

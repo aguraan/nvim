@@ -16,11 +16,11 @@ return {
 				highlight = {
 					enable = true,
 					-- additional_vim_regex_highlighting = "typescript",
-          disable = function (_, bufnr)
-            local buf_name = vim.api.nvim_buf_get_name(bufnr)
-            local file_size = vim.fn.getfsize(buf_name)
-            return file_size > 256 * 1024
-          end,
+          -- disable = function (_, bufnr)
+          --   local buf_name = vim.api.nvim_buf_get_name(bufnr)
+          --   local file_size = vim.fn.getfsize(buf_name)
+          --   return file_size > 256 * 1024
+          -- end,
 				},
 				-- enable indentation
 				indent = { enable = true },
@@ -30,7 +30,11 @@ return {
 				},
 				-- ensure these language parsers are installed
 				ensure_installed = {
+          "c",
+          "diff",
 					"json",
+          "jsonc",
+          "jsdoc",
 					"javascript",
 					"typescript",
 					"tsx",
@@ -42,11 +46,18 @@ return {
 					"markdown_inline",
 					"graphql",
 					"bash",
+          "printf",
 					"lua",
+          "luadoc",
+          "luap",
 					"vim",
+          "vimdoc",
 					"dockerfile",
 					"gitignore",
 					"go",
+          "toml",
+          "xml",
+          "regex",
 				},
 				incremental_selection = {
 					enable = true,

@@ -12,7 +12,6 @@ return {
 				{ "<leader>c", group = "code" },
 				{ "<leader>a", group = "avante" },
 				{ "<leader>e", group = "explorer" },
-				{ "<leader>x", group = "trouble" },
 				{ "<leader>f", group = "file/find" },
 				{ "<leader>g", group = "git" },
 				{ "<leader>s", group = "cloak" },

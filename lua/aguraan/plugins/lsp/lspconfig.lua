@@ -96,6 +96,20 @@ return {
 		-- 	},
 		-- })
 
+		lspconfig["bashls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["pbls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["protols"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 		-- configure clangd server with plugin
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,

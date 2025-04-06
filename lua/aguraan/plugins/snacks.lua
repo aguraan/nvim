@@ -8,9 +8,11 @@ return {
     indent = { enabled = false },
     input = { enabled = true },
     notifier = { enabled = true },
+    dashboard = { enabled = true },
     quickfile = { enabled = true },
     statuscolumn = { enabled = false },
     words = { enabled = false },
+    scroll = { enabled = false },
   },
   keys = {
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },

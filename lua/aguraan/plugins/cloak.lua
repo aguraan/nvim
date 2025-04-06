@@ -1,5 +1,8 @@
 return {
 	"laytan/cloak.nvim",
+  keys = {
+    { "<leader>sl", "<cmd>CloakPreviewLine<CR>", desc = "Preview Cloak line" },
+  },
 	config = function()
 		require("cloak").setup({
 			enabled = true,

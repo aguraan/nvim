@@ -63,7 +63,7 @@ return {
 		wk.setup(opts)
 		if not vim.tbl_isempty(opts.defaults) then
       vim.notify("which-key: opts.defaults is deprecated. Please use opts.spec instead.", vim.log.levels.WARN)
-			wk.register(opts.defaults)
+			wk.add(opts.defaults)
 		end
 	end,
 }

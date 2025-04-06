@@ -1,6 +1,6 @@
 return {
 	"yetone/avante.nvim",
-	event = "VeryLazy",
+	event = { "LazyFile", "VeryLazy" },
 	lazy = false,
 	version = false, -- set this to "*" if you want to always pull the latest change, false to update on release
 	opts = {

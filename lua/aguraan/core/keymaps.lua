@@ -36,14 +36,5 @@ keymap.set("n", "N", "Nzzzv")
 -- keymap.set("n", "x", '"_x')
 keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without yanking" })
 
--- Gitsigns
-keymap.set("n", "<leader>gs", ":<C-U>Gitsigns<CR>", { desc = "Toggle Gitsigns" })
-keymap.set("n", "<leader>gh", ":<C-U>Gitsigns preview_hunk<CR>", { desc = "Preview Gitsigns hunk" })
-keymap.set("n", "]h", ":<C-U>Gitsigns next_hunk<CR>", { desc = "Next Gitsigns hunk" })
-keymap.set("n", "[h", ":<C-U>Gitsigns prev_hunk<CR>", { desc = "Previous Gitsigns hunk" })
-
--- Cloak
-keymap.set("n", "<leader>sl", ":<C-U>CloakPreviewLine<CR>", { desc = "Preview Cloak line" })
-
 -- Terminal
 keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })

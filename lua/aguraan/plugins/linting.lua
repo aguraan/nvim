@@ -3,7 +3,7 @@ return {
 	lazy = true,
 	event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
 	config = function()
-    vim.env.ESLINT_D_PPID = vim.fn.getpid()
+		vim.env.ESLINT_D_PPID = vim.fn.getpid()
 		local lint = require("lint")
 
 		lint.linters_by_ft = {

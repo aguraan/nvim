@@ -1,22 +1,22 @@
 return {
 	"yetone/avante.nvim",
-	event = { "LazyFile", "VeryLazy" },
+	event = "VeryLazy",
 	lazy = false,
 	version = false, -- set this to "*" if you want to always pull the latest change, false to update on release
 	opts = {
 		provider = "openai",
 		openai = {
-      -- Models Aliases:
-      -- - gpt-4o
-      -- - chatgpt-4o-latest
-      -- - gpt-4o-mini
-      -- - o1
-      -- - o1-mini
-      -- - o3-mini
-      -- - o1-preview
-      -- - gpt-4o-realtime-preview
-      -- - gpt-4o-mini-realtime-preview
-      -- - gpt-4o-audio-preview
+			-- Models Aliases:
+			-- - gpt-4o
+			-- - chatgpt-4o-latest
+			-- - gpt-4o-mini
+			-- - o1
+			-- - o1-mini
+			-- - o3-mini
+			-- - o1-preview
+			-- - gpt-4o-realtime-preview
+			-- - gpt-4o-mini-realtime-preview
+			-- - gpt-4o-audio-preview
 			model = "gpt-4o-mini",
 		},
 		hints = { enabled = false },
@@ -25,11 +25,15 @@ return {
 	build = "make",
 	-- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
 	dependencies = {
+		"nvim-treesitter/nvim-treesitter",
 		"stevearc/dressing.nvim",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		--- The below dependencies are optional,
+		"echasnovski/mini.pick", -- for file_selector provider mini.pick
+		"nvim-telescope/telescope.nvim", -- for file_selector provider telescope
 		"hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+		"ibhagwan/fzf-lua", -- for file_selector provider fzf
 		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
 		"zbirenbaum/copilot.lua", -- for providers='copilot'
 		{
@@ -54,7 +58,6 @@ return {
 			"MeanderingProgrammer/render-markdown.nvim",
 			opts = {
 				file_types = { "markdown", "Avante" },
-				latex = { enabled = false },
 			},
 			ft = { "markdown", "Avante" },
 		},

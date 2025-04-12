@@ -5,7 +5,7 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			require("tokyonight").setup({
-				transparent = false,
+				transparent = true,
 				light_style = "day", -- The theme is used when the background is set to light
 				terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
 				style = "night",
@@ -18,7 +18,14 @@ return {
 				lualine_bold = true,
 				cache = true,
 				on_colors = function(colors) end,
-				on_highlights = function(highlights, colors) end,
+				on_highlights = function(highlights, colors)
+					-- highlights.LineNr = {
+					-- 	fg = colors.yellow,
+					-- }
+					-- highlights.CursorLineNr = {
+					-- 	fg = colors.yellow,
+					-- }
+				end,
 				plugins = {
 					-- enable all plugins when not using lazy.nvim
 					-- set to false to manually enable/disable plugins

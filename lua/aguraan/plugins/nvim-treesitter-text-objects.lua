@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter-textobjects",
-  lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
+  lazy = true, -- load treesitter early when opening a file from the cmdline
 	config = function()
 		local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
 

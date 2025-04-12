@@ -1,8 +1,5 @@
 return {
 	"laytan/cloak.nvim",
-  keys = {
-    { "<leader>sl", "<cmd>CloakPreviewLine<CR>", desc = "Preview Cloak line" },
-  },
 	config = function()
 		require("cloak").setup({
 			enabled = true,
@@ -25,5 +22,7 @@ return {
 				},
 			},
 		})
+
+		vim.keymap.set("n", "<leader>sl", "<cmd>CloakPreviewLine<CR>", { desc = "Preview Cloak line" })
 	end,
 }

@@ -6,6 +6,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     indent = { enabled = true },
+    image = { enabled = true },
     input = {
       enabled = true,
       win = {
@@ -34,5 +35,14 @@ return {
     { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
     { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
     { "<leader>dps", function() Snacks.profiler.scratch() end, desc = "Profiler Scratch Buffer" },
+
+    -- Telescope
+		{ "<leader>ff", function () Snacks.picker.files() end, desc = "Fuzzy find files in cwd" },
+		{ "<leader>fc", function () Snacks.picker.grep_word() end, desc = "Find string under cursor in cwd" },
+		{ "<leader>fb", function () Snacks.picker.buffers() end, desc = "Open buffers" },
+		{ "<leader>fu", function () Snacks.picker.undo() end, desc = "Open undo list" },
+		{ "<leader>/", function () Snacks.picker.grep() end, desc = "Find string in cwd" },
+		{ "<leader>vh", function () Snacks.picker.help() end, desc = "Help tags" },
+    { "<leader>sh", function () Snacks.notifier.show_history() end, desc = "Show notifier history" },
   },
 }

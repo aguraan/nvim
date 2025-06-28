@@ -6,8 +6,10 @@ return {
 		config = function()
 			require("tokyonight").setup({
 				transparent = true,
-				light_style = "day", -- The theme is used when the background is set to light
-				terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+        -- The theme is used when the background is set to light
+				light_style = "day",
+        -- Configure the colors used when opening a `:terminal` in Neovim
+				terminal_colors = true,
 				style = "night",
 				styles = {
 					sidebars = "transparent",

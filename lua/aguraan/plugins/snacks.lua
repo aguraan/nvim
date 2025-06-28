@@ -38,10 +38,12 @@ return {
 
     -- Telescope
 		{ "<leader>ff", function () Snacks.picker.files() end, desc = "Fuzzy find files in cwd" },
+		-- { "<leader>ff", function () Snacks.dashboard.pick('files') end, desc = "Fuzzy find files in cwd" },
 		{ "<leader>fc", function () Snacks.picker.grep_word() end, desc = "Find string under cursor in cwd" },
 		{ "<leader>fb", function () Snacks.picker.buffers() end, desc = "Open buffers" },
 		{ "<leader>fu", function () Snacks.picker.undo() end, desc = "Open undo list" },
 		{ "<leader>/", function () Snacks.picker.grep() end, desc = "Find string in cwd" },
+		-- { "<leader>/", function () Snacks.dashboard.pick('live_grep') end, desc = "Find string in cwd" },
 		{ "<leader>vh", function () Snacks.picker.help() end, desc = "Help tags" },
     { "<leader>sh", function () Snacks.notifier.show_history() end, desc = "Show notifier history" },
   },

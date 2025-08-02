@@ -5,7 +5,7 @@ return {
     "kristijanhusak/vim-dadbod-ui",
     dependencies = {
       { "tpope/vim-dadbod", lazy = true },
-      { "kristijanhusak/vim-dadbod-completion", lazy = true },
+      { "kristijanhusak/vim-dadbod-completion", ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
     },
     init = function()
       vim.cmd([[hi NotificationInfo guifg=#65D1FF guibg=#292e42]])

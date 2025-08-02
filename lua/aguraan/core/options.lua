@@ -52,3 +52,4 @@ opt.sidescrolloff = 15 -- start scrolling when we're 15 columns away from margin
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- opt.laststatus = 3 -- avante requires
+opt.winborder = "rounded"

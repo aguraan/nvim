@@ -25,8 +25,8 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- remaps with centering
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
+-- keymap.set("n", "<C-d>", "<C-d>zz")
+-- keymap.set("n", "<C-u>", "<C-u>zz")
 -- keymap.set("n", "<C-d>", "M<C-d>")
 -- keymap.set("n", "<C-u>", "M<C-u>")
 keymap.set("n", "n", "nzzzv")

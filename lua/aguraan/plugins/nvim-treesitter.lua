@@ -72,6 +72,12 @@ return {
 					"toml",
 					"xml",
 					"regex",
+          "latex",
+          "norg",
+          "scss",
+          "svelte",
+          "typst",
+          "vue",
 				},
 				incremental_selection = {
 					enable = true,

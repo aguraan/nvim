@@ -18,7 +18,7 @@ return {
     quickfile = { enabled = true },
     statuscolumn = { enabled = false },
     words = { enabled = false },
-    scroll = { enabled = false },
+    scroll = { enabled = true },
     lazygit = { enabled = true },
     gitbrowse = { enabled = true },
   },

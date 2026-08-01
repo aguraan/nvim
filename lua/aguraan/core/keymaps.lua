@@ -39,11 +39,6 @@ keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without yanking" })
 -- Terminal
 keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
--- Keymap to trigger the transformation
-keymap.set("v", "<leader>pa", function()
-	require("aguraan.core.functions").transformAwaitToPromiseAll()
-end, { desc = "Transform sequential await to Promise.all" })
-
 keymap.set("v", "<leader>pf", function()
   local startLine = vim.fn.getpos('v')[2]
   print("startLine", startLine)

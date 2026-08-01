@@ -14,6 +14,7 @@ return {
 						".env*",
 						"*.env",
 						"notes.md",
+						"pass.md",
 					},
 					-- Match an equals sign and any character after it.
 					-- This can also be a table of patterns to cloak,
@@ -24,5 +25,6 @@ return {
 		})
 
 		vim.keymap.set("n", "<leader>sl", "<cmd>CloakPreviewLine<CR>", { desc = "Preview Cloak line" })
+		vim.keymap.set("n", "<leader>st", "<cmd>CloakToggle<CR>", { desc = "Toggle Cloak" })
 	end,
 }

@@ -5,7 +5,9 @@ return {
 
 	"inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
 
-	"github/copilot.vim",
-
 	"tpope/vim-fugitive",
+
+	"stevearc/dressing.nvim",
+
+  -- { 'nvim-mini/mini.nvim', version = '*' },
 }

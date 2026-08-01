@@ -32,7 +32,7 @@ return {
     { "<c-/>", function() Snacks.terminal() end, desc = "Toggle Terminal"},
     { "<c-_>", function() Snacks.terminal() end, desc = "which_key_ignore" },
 
-    { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
+    { "<leader>.",  function() Snacks.scratch({ ft = "markdown", win = { width = 130, height = 35 } }) end, desc = "Toggle Scratch Buffer" },
     { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
     { "<leader>dps", function() Snacks.profiler.scratch() end, desc = "Profiler Scratch Buffer" },
 
@@ -43,6 +43,8 @@ return {
 		{ "<leader>fb", function () Snacks.picker.buffers() end, desc = "Open buffers" },
 		{ "<leader>fu", function () Snacks.picker.undo() end, desc = "Open undo list" },
 		{ "<leader>/", function () Snacks.picker.grep() end, desc = "Find string in cwd" },
+		{ "<leader>a/", function () Snacks.picker.grep({ hidden = true, ignored = true }) end, desc = "Find string in cwd" },
+    { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
 		-- { "<leader>/", function () Snacks.dashboard.pick('live_grep') end, desc = "Find string in cwd" },
 		{ "<leader>vh", function () Snacks.picker.help() end, desc = "Help tags" },
     { "<leader>sh", function () Snacks.notifier.show_history() end, desc = "Show notifier history" },

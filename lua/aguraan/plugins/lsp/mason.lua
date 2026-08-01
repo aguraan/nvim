@@ -38,15 +38,16 @@ return {
 				"ts_ls",
 				"html",
 				"cssls",
-				-- "tailwindcss",
+				"tailwindcss",
 				"lua_ls",
 				-- "graphql",
 				"emmet_ls",
-				-- "prismals",
+				"prismals",
 				-- "pyright",
 				"gopls",
 				"bashls",
 				"pbls",
+        "rust_analyzer", -- rust lsp
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed

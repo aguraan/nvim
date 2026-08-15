@@ -4,7 +4,7 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim", opts = {} },
+		{ "folke/lazydev.nvim", ft = "lua", opts = {} },
 	},
 	config = function()
 		local keymap = vim.keymap -- for conciseness
@@ -17,7 +17,7 @@ return {
 			callback = function(ev)
 				-- Buffer local mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
-				local opts = { buffer = ev.buf, silent = true }
+				local opts = { buf = ev.buf, silent = true }
 
 				-- set keybinds
 				opts.desc = "Show LSP references"
@@ -223,7 +223,7 @@ return {
 					vim.keymap.set("i", char, function()
 						vim.api.nvim_feedkeys(char, "n", false)
 						vim.defer_fn(vim.lsp.buf.signature_help, 50)
-					end, { buffer = bufnr })
+					end, { buf = bufnr })
 				end
 			end,
 		})

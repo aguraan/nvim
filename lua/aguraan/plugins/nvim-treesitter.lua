@@ -31,6 +31,7 @@ local parsers = {
 	"svelte",
 	"typst",
 	"vue",
+  "sql",
 }
 
 return {
